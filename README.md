@@ -23,6 +23,11 @@ Inspired by the original Codecraftr, this advanced clone shatters previous limit
 
 ---
 
+## 🎥 Demo Preview
+![Demo](CodeCraftr-Animation-4K.gif)
+
+---
+
 ## 🛠️ The Tech Stack
 
 This project was forged using an unconventional and powerful blend of modern tools:
@@ -77,11 +82,6 @@ const myCode = new Vibe({
 
 myCode.export(); // Limitless 4K downloads unlocked.
 ```
-
----
-
-## 🎥 Demo Preview
-![Demo](CodeCraftr-Animation-4K.gif)
 
 ---
 
