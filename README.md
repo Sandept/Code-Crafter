@@ -86,6 +86,8 @@ myCode.export(); // Limitless 4K downloads unlocked.
   Your browser does not support the video tag.
 </video>
 
+<video src="CodeCraftr-Animation-4K.mp4" controls width="100%">
+
 ---
 
 ### 🤝 Acknowledgements & Inspiration
