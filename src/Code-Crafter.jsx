@@ -647,19 +647,19 @@ export default function App() {
             </div>
 
             {/* HEADER */}
-            <header className="pt-10 pb-6 px-6 max-w-7xl mx-auto flex items-center justify-between z-10 relative">
+            <header className="pt-6 sm:pt-10 pb-4 sm:pb-6 px-4 sm:px-6 max-w-7xl mx-auto flex items-center justify-between z-10 relative">
                 <div
-                    className="flex items-center gap-4 group cursor-pointer"
+                    className="flex items-center gap-3 sm:gap-4 group cursor-pointer"
                     onClick={() => window.location.reload()}
                     title="Reset Workspace"
                 >
-                    <div className={`w-14 h-14 flex items-center justify-center border-[3px] rounded-tl-2xl rounded-tr-2xl rounded-br-2xl rounded-bl-none shadow-pop btn-bounce ${isDarkMode ? 'bg-[#334155] border-[#020617]' : 'bg-white border-[#1E293B]'}`}>
-                        <Code className="w-7 h-7 stroke-[2.5]" />
+                    <div className={`w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center border-[2px] sm:border-[3px] rounded-tl-xl sm:rounded-tl-2xl rounded-tr-xl sm:rounded-tr-2xl rounded-br-xl sm:rounded-br-2xl rounded-bl-none shadow-pop btn-bounce ${isDarkMode ? 'bg-[#334155] border-[#020617]' : 'bg-white border-[#1E293B]'}`}>
+                        <Code className="w-5 h-5 sm:w-7 sm:h-7 stroke-[2.5]" />
                     </div>
                     <div>
-                        <h1 className="text-4xl md:text-5xl font-extrabold font-outfit tracking-tight">
-                            CodeCrafter
-                            <span className="inline-block ml-3 w-3 h-3 rounded-full bg-[#34D399] animate-bounce"></span>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-outfit tracking-tight">
+                            Code-Crafter
+                            <span className="inline-block ml-2 sm:ml-3 w-2 h-2 sm:w-3 h-3 rounded-full bg-[#34D399] animate-bounce"></span>
                         </h1>
                     </div>
                 </div>
@@ -667,51 +667,51 @@ export default function App() {
                 <div className="flex items-center gap-4">
                     <button
                         onClick={() => setIsDarkMode(!isDarkMode)}
-                        className={`w-14 h-14 flex items-center justify-center border-2 rounded-full shadow-pop btn-bounce ${isDarkMode ? 'bg-[#1E293B] border-[#020617]' : 'bg-white border-[#1E293B]'}`}
+                        className={`w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center border-2 rounded-full shadow-pop btn-bounce ${isDarkMode ? 'bg-[#1E293B] border-[#020617]' : 'bg-white border-[#1E293B]'}`}
                         aria-label="Toggle Theme"
                     >
-                        {isDarkMode ? <Sun className="w-6 h-6 stroke-[2.5] text-[#FBBF24]" /> : <Moon className="w-6 h-6 stroke-[2.5] text-[#8B5CF6]" />}
+                        {isDarkMode ? <Sun className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.5] text-[#FBBF24]" /> : <Moon className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.5] text-[#8B5CF6]" />}
                     </button>
                 </div>
             </header>
 
             {/* MAIN LAYOUT */}
-            <main className="max-w-7xl mx-auto px-6 py-6 grid grid-cols-1 xl:grid-cols-12 gap-10">
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6 flex flex-col xl:grid xl:grid-cols-12 gap-8 xl:gap-10">
 
                 {/* LEFT PANEL: CONFIGURATION */}
-                <div className="xl:col-span-5 space-y-8 relative z-10">
+                <div className="xl:col-span-5 space-y-6 sm:space-y-8 relative z-10 order-2 xl:order-1">
 
                     {/* Code Editor (Sticker Card) */}
-                    <div className="card-sticker shadow-pop-lg p-6 relative">
-                        <div className="absolute -top-4 -right-4 bg-[#FBBF24] border-2 border-[#1E293B] rounded-full px-4 py-1 text-sm font-bold font-outfit transform rotate-6 shadow-pop-sm">
+                    <div className="card-sticker shadow-pop-lg p-4 sm:p-6 relative">
+                        <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-[#FBBF24] border-2 border-[#1E293B] rounded-full px-3 sm:px-4 py-1 text-xs sm:text-sm font-bold font-outfit transform rotate-6 shadow-pop-sm">
                             User-Edit!
                         </div>
 
-                        <label className="text-lg font-bold font-outfit uppercase tracking-wide mb-3 flex items-center gap-2">
-                            <span className="bg-[#8B5CF6] p-1.5 rounded-md text-white"><Code className="w-4 h-4 stroke-[3]" /></span>
+                        <label className="text-base sm:text-lg font-bold font-outfit uppercase tracking-wide mb-3 flex items-center gap-2">
+                            <span className="bg-[#8B5CF6] p-1 sm:p-1.5 rounded-md text-white"><Code className="w-3 h-3 sm:w-4 sm:h-4 stroke-[3]" /></span>
                             CodePad
                         </label>
 
                         <textarea
                             value={code}
                             onChange={(e) => setCode(e.target.value)}
-                            className="w-full h-56 p-4 text-base font-mono input-chunky transition-all custom-scrollbar resize-none"
+                            className="w-full h-48 sm:h-56 p-3 sm:p-4 text-sm sm:text-base font-mono input-chunky transition-all custom-scrollbar resize-none"
                             spellCheck="false"
                         />
                     </div>
 
                     {/* Settings Panel */}
-                    <div className="card-sticker shadow-pop-lg p-6 relative">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div className="card-sticker shadow-pop-lg p-4 sm:p-6 relative">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
 
                             <div className="space-y-2">
-                                <label className="text-sm font-bold font-outfit uppercase tracking-wide text-[#64748B] flex items-center gap-2">
-                                    <Palette className="w-4 h-4 stroke-[2.5]" /> Theme
+                                <label className="text-xs sm:text-sm font-bold font-outfit uppercase tracking-wide text-[#64748B] flex items-center gap-2">
+                                    <Palette className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" /> Theme
                                 </label>
                                 <select
                                     value={theme}
                                     onChange={(e) => setTheme(e.target.value)}
-                                    className="w-full p-3 text-base input-chunky transition-all appearance-none cursor-pointer font-semibold"
+                                    className="w-full p-2.5 sm:p-3 text-sm sm:text-base input-chunky transition-all appearance-none cursor-pointer font-semibold"
                                 >
                                     {Object.entries(THEMES).map(([k, v]) => (
                                         <option key={k} value={k}>{v.name}</option>
@@ -720,13 +720,13 @@ export default function App() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-sm font-bold font-outfit uppercase tracking-wide text-[#64748B] flex items-center gap-2">
-                                    <Sparkles className="w-4 h-4 stroke-[2.5]" /> Background
+                                <label className="text-xs sm:text-sm font-bold font-outfit uppercase tracking-wide text-[#64748B] flex items-center gap-2">
+                                    <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" /> Background
                                 </label>
                                 <select
                                     value={gradient}
                                     onChange={(e) => setGradient(e.target.value)}
-                                    className="w-full p-3 text-base input-chunky transition-all appearance-none cursor-pointer font-semibold"
+                                    className="w-full p-2.5 sm:p-3 text-sm sm:text-base input-chunky transition-all appearance-none cursor-pointer font-semibold"
                                 >
                                     {Object.entries(GRADIENTS).map(([k, v]) => (
                                         <option key={k} value={k}>{v.name}</option>
@@ -735,13 +735,13 @@ export default function App() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-sm font-bold font-outfit uppercase tracking-wide text-[#64748B] flex items-center gap-2">
-                                    <Braces className="w-4 h-4 stroke-[2.5]" /> Language
+                                <label className="text-xs sm:text-sm font-bold font-outfit uppercase tracking-wide text-[#64748B] flex items-center gap-2">
+                                    <Braces className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" /> Language
                                 </label>
                                 <select
                                     value={language}
                                     onChange={(e) => setLanguage(e.target.value)}
-                                    className="w-full p-3 text-base input-chunky transition-all appearance-none cursor-pointer font-semibold"
+                                    className="w-full p-2.5 sm:p-3 text-sm sm:text-base input-chunky transition-all appearance-none cursor-pointer font-semibold"
                                 >
                                     {Object.entries(LANGUAGES).map(([k, v]) => (
                                         <option key={k} value={k}>{v}</option>
@@ -750,13 +750,13 @@ export default function App() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-sm font-bold font-outfit uppercase tracking-wide text-[#64748B] flex items-center gap-2">
-                                    <Type className="w-4 h-4 stroke-[2.5]" /> Font Size
+                                <label className="text-xs sm:text-sm font-bold font-outfit uppercase tracking-wide text-[#64748B] flex items-center gap-2">
+                                    <Type className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" /> Font Size
                                 </label>
                                 <select
                                     value={fontSize}
                                     onChange={(e) => setFontSize(Number(e.target.value))}
-                                    className="w-full p-3 text-base input-chunky transition-all appearance-none cursor-pointer font-semibold"
+                                    className="w-full p-2.5 sm:p-3 text-sm sm:text-base input-chunky transition-all appearance-none cursor-pointer font-semibold"
                                 >
                                     {FONT_SIZES.map((size) => (
                                         <option key={size} value={size}>{size}px</option>
@@ -766,16 +766,16 @@ export default function App() {
 
                         </div>
 
-                        <div className="space-y-3 pt-6 border-t-2 border-dashed border-[#CBD5E1] dark:border-[#334155]">
-                            <label className="text-sm font-bold font-outfit uppercase tracking-wide text-[#64748B] flex items-center gap-2">
-                                <Settings className="w-4 h-4 stroke-[2.5]" /> Output Quality
+                        <div className="space-y-3 pt-5 sm:pt-6 border-t-2 border-dashed border-[#CBD5E1] dark:border-[#334155]">
+                            <label className="text-xs sm:text-sm font-bold font-outfit uppercase tracking-wide text-[#64748B] flex items-center gap-2">
+                                <Settings className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" /> Output Quality
                             </label>
-                            <div className="flex gap-4">
+                            <div className="flex gap-3 sm:gap-4">
                                 {Object.entries(RESOLUTIONS).map(([k, v]) => (
                                     <button
                                         key={k}
                                         onClick={() => setResolution(k)}
-                                        className={`flex-1 text-base py-2.5 rounded-xl border-2 btn-bounce font-bold transition-colors
+                                        className={`flex-1 text-sm sm:text-base py-2 sm:py-2.5 rounded-xl border-2 btn-bounce font-bold transition-colors
                       ${resolution === k
                                                 ? 'bg-[#1E293B] text-white border-[#1E293B] shadow-pop-sm dark:bg-[#F8FAFC] dark:text-[#0F172A] dark:border-[#F8FAFC]'
                                                 : 'bg-transparent border-[#CBD5E1] text-[#64748B] hover:border-[#1E293B] hover:text-[#1E293B] dark:border-[#334155] dark:hover:border-[#F8FAFC] dark:hover:text-[#F8FAFC]'
@@ -787,27 +787,27 @@ export default function App() {
                             </div>
                         </div>
 
-                        <div className="mt-8 space-y-4">
+                        <div className="mt-6 sm:mt-8 space-y-4">
                             <button
                                 onClick={exportImage}
                                 disabled={isRecording}
-                                className="w-full flex items-center justify-center gap-3 py-3 rounded-full border-2 border-[#1E293B] dark:border-[#020617] bg-white dark:bg-[#1E293B] font-bold text-lg shadow-pop btn-bounce disabled:opacity-50"
+                                className="w-full flex items-center justify-center gap-2 sm:gap-3 py-2.5 sm:py-3 rounded-full border-2 border-[#1E293B] dark:border-[#020617] bg-white dark:bg-[#1E293B] font-bold text-base sm:text-lg shadow-pop btn-bounce disabled:opacity-50"
                             >
-                                <ImageIcon className="w-5 h-5 stroke-[2.5]" /> Download Image
+                                <ImageIcon className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" /> Download Image
                             </button>
 
                             <button
                                 onClick={exportVideo}
                                 disabled={isRecording}
-                                className="w-full flex items-center justify-center gap-3 py-4 btn-candy font-bold text-lg shadow-pop btn-bounce overflow-hidden relative group disabled:opacity-80 disabled:cursor-not-allowed"
+                                className="w-full flex items-center justify-center gap-2 sm:gap-3 py-3 sm:py-4 btn-candy font-bold text-base sm:text-lg shadow-pop btn-bounce overflow-hidden relative group disabled:opacity-80 disabled:cursor-not-allowed"
                             >
                                 {isRecording ? (
                                     <span className="relative z-10 flex items-center gap-2">
-                                        <RefreshCcw className="w-5 h-5 stroke-[3] animate-spin" /> Rendering Magic...
+                                        <RefreshCcw className="w-4 h-4 sm:w-5 sm:h-5 stroke-[3] animate-spin" /> Rendering Magic...
                                     </span>
                                 ) : (
                                     <span className="relative z-10 flex items-center gap-2">
-                                        <Video className="w-5 h-5 stroke-[3] group-hover:scale-110 transition-transform" /> Create Video
+                                        <Video className="w-4 h-4 sm:w-5 sm:h-5 stroke-[3] group-hover:scale-110 transition-transform" /> Create Video
                                     </span>
                                 )}
                                 {isRecording && (
@@ -822,35 +822,35 @@ export default function App() {
                 </div>
 
                 {/* RIGHT PANEL: LIVE PREVIEW & VIDEO PLAYER */}
-                <div className="xl:col-span-7 flex flex-col items-center justify-center relative min-h-[500px] xl:mt-0 mt-8">
+                <div className="xl:col-span-7 flex flex-col items-center justify-center relative min-h-[250px] sm:min-h-[400px] xl:min-h-[500px] order-1 xl:order-2">
 
-                    <div className="w-full relative aspect-video p-1.5 rounded-2xl border-2 border-[#1E293B] dark:border-[#020617] bg-white dark:bg-[#1E293B] shadow-pop-lg z-10 overflow-hidden">
+                    <div className="w-full relative aspect-video p-1 sm:p-1.5 rounded-xl sm:rounded-2xl border-2 border-[#1E293B] dark:border-[#020617] bg-white dark:bg-[#1E293B] shadow-pop-lg z-10 overflow-hidden">
 
                         <canvas
                             ref={previewCanvasRef}
-                            className={`w-full h-full rounded-xl object-contain bg-[#1E293B] ${videoPreviewUrl ? 'hidden' : 'block'}`}
+                            className={`w-full h-full rounded-lg sm:rounded-xl object-contain bg-[#1E293B] ${videoPreviewUrl ? 'hidden' : 'block'}`}
                         />
 
                         {isRecording && (
-                            <div className="absolute inset-0 m-1.5 rounded-xl flex flex-col items-center justify-center z-20 bg-white/90 dark:bg-[#0F172A]/90 backdrop-blur-sm">
-                                <div className="w-24 h-24 rounded-full border-2 border-[#1E293B] bg-[#F472B6] flex items-center justify-center mb-6 shadow-pop">
-                                    <Zap className="w-12 h-12 stroke-[2.5] text-white animate-bounce" />
+                            <div className="absolute inset-0 m-1 sm:m-1.5 rounded-lg sm:rounded-xl flex flex-col items-center justify-center z-20 bg-white/90 dark:bg-[#0F172A]/90 backdrop-blur-sm p-4 text-center">
+                                <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-full border-2 border-[#1E293B] bg-[#F472B6] flex items-center justify-center mb-4 sm:mb-6 shadow-pop">
+                                    <Zap className="w-8 h-8 sm:w-12 sm:h-12 stroke-[2.5] text-white animate-bounce" />
                                 </div>
-                                <h3 className="text-3xl font-extrabold font-outfit mb-2">Printing Frames</h3>
-                                <p className="text-lg font-semibold text-[#64748B] mb-8">Creating smooth cinematic masterpiece</p>
+                                <h3 className="text-xl sm:text-3xl font-extrabold font-outfit mb-1 sm:mb-2">Printing Frames</h3>
+                                <p className="text-xs sm:text-lg font-semibold text-[#64748B] mb-4 sm:mb-8">Creating smooth cinematic masterpiece</p>
 
-                                <div className="w-2/3 h-6 rounded-full border-2 border-[#1E293B] bg-[#F1F5F9] dark:bg-[#1E293B] dark:border-[#020617] p-1 shadow-inner">
+                                <div className="w-5/6 sm:w-2/3 h-4 sm:h-6 rounded-full border-2 border-[#1E293B] bg-[#F1F5F9] dark:bg-[#1E293B] dark:border-[#020617] p-0.5 sm:p-1 shadow-inner">
                                     <div
                                         className="h-full rounded-full bg-[#34D399]"
                                         style={{ width: `${progress}%`, transition: 'width 0.1s linear' }}
                                     />
                                 </div>
-                                <p className="text-xl font-bold font-outfit mt-4 text-[#8B5CF6]">{progress}%</p>
+                                <p className="text-sm sm:text-xl font-bold font-outfit mt-3 sm:mt-4 text-[#8B5CF6]">{progress}%</p>
                             </div>
                         )}
 
                         {videoPreviewUrl && (
-                            <div ref={videoContainerRef} className="absolute inset-0 z-30 flex flex-col bg-black rounded-xl overflow-hidden group">
+                            <div ref={videoContainerRef} className="absolute inset-0 z-30 flex flex-col bg-black rounded-lg sm:rounded-xl overflow-hidden group">
                                 <video
                                     ref={videoRef}
                                     src={videoPreviewUrl}
@@ -864,18 +864,18 @@ export default function App() {
                                 {!isPlaying && (
                                     <button
                                         onClick={togglePlay}
-                                        className="absolute inset-0 m-auto w-24 h-24 rounded-full flex items-center justify-center border-2 border-[#1E293B] bg-[#FBBF24] text-[#1E293B] shadow-pop transition-transform hover:scale-110 z-40"
+                                        className="absolute inset-0 m-auto w-16 h-16 sm:w-24 sm:h-24 rounded-full flex items-center justify-center border-2 border-[#1E293B] bg-[#FBBF24] text-[#1E293B] shadow-pop transition-transform hover:scale-110 z-40"
                                     >
-                                        <Play className="w-10 h-10 ml-2 stroke-[3]" fill="currentColor" />
+                                        <Play className="w-8 h-8 sm:w-10 sm:h-10 ml-1 sm:ml-2 stroke-[3]" fill="currentColor" />
                                     </button>
                                 )}
 
-                                <div className="absolute bottom-6 right-6 flex items-center gap-4 z-40 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 flex items-center gap-4 z-40 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
                                     <button
                                         onClick={toggleFullscreen}
-                                        className="p-3 rounded-full border-2 border-[#1E293B] bg-white text-[#1E293B] shadow-pop btn-bounce"
+                                        className="p-2.5 sm:p-3 rounded-full border-2 border-[#1E293B] bg-white text-[#1E293B] shadow-pop btn-bounce"
                                     >
-                                        <Maximize className="w-5 h-5 stroke-[3]" />
+                                        <Maximize className="w-4 h-4 sm:w-5 sm:h-5 stroke-[3]" />
                                     </button>
                                 </div>
                             </div>
@@ -883,16 +883,16 @@ export default function App() {
                     </div>
 
                     {videoPreviewUrl && (
-                        <div className="absolute -bottom-20 w-full flex justify-center gap-6 z-40 animate-in slide-in-from-top-8">
+                        <div className="mt-6 w-full flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 z-40 animate-in slide-in-from-top-4">
                             <button
                                 onClick={handleDownloadPreview}
-                                className="flex items-center gap-2 px-8 py-3 rounded-full border-2 border-[#1E293B] bg-[#34D399] text-[#1E293B] font-bold text-lg shadow-pop btn-bounce"
+                                className="flex items-center justify-center gap-2 px-6 sm:px-8 py-3 rounded-full border-2 border-[#1E293B] bg-[#34D399] text-[#1E293B] font-bold text-base sm:text-lg shadow-pop btn-bounce"
                             >
-                                <Download className="w-6 h-6 stroke-[3]" /> Save Video
+                                <Download className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" /> Save Video
                             </button>
                             <button
                                 onClick={() => setVideoPreviewUrl(null)}
-                                className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[#1E293B] bg-white text-[#1E293B] font-bold text-lg shadow-pop btn-bounce"
+                                className="flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-[#1E293B] bg-white text-[#1E293B] font-bold text-base sm:text-lg shadow-pop btn-bounce"
                             >
                                 <Trash2 className="w-5 h-5 stroke-[3]" /> Discard
                             </button>
