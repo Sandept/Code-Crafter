@@ -81,7 +81,7 @@ myCode.export(); // Limitless 4K downloads unlocked.
 ---
 
 ## 🎥 Demo Preview
-
+![Demo](CodeCraftr-Animation-4K.gif)
 
 ---
 
