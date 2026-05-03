@@ -1,5 +1,4 @@
 # 🌌 CodeCrafter Advanced
-
 > **The Ultimate 4K Code Snap & Video Studio**
 
 Write code in a beautiful terminal, catch the vibe, and download cinematic 4K snapshots and videos - with absolutely zero limits.
@@ -21,6 +20,7 @@ Inspired by the original Codecraftr, this advanced clone shatters previous limit
 * 🎬 **4K Cinematic Exports:** Download your code snaps and typing animations in crystal-clear 4K.
 * ♾️ **Zero Limits:** No watermarks, no paywalls, no daily export limits. Pure freedom.
 * 💻 **Immersive Codepad:** A terminal-like experience that feels natural, fast, and responsive.
+
 ---
 
 ## 🛠️ The Tech Stack
@@ -39,16 +39,18 @@ This project was forged using an unconventional and powerful blend of modern too
 ## 🚀 Getting Started
 
 ### 🌐 Use the Web Version (Recommended)
+
 You don't need to install anything to get started. Experience the full power of CodeCrafter Advanced right in your browser:
 
 👉 **[Launch CodeCrafter Codepad](https://sandept.github.io/Code-Crafter/)**
 
 ### 💻 Local Setup (For Contributors)
+
 If you want to run this advanced workspace locally:
 
 ```bash
 # 1. Clone this repository
-git clone [https://github.com/sandept/Code-Crafter.git](https://github.com/sandept/Code-Crafter.git)
+git clone https://github.com/sandept/Code-Crafter.git
 
 # 2. Navigate to the directory
 cd Code-Crafter
@@ -57,10 +59,11 @@ cd Code-Crafter
 # (e.g., using VS Code Live Server or Python HTTP server)
 python3 -m http.server 8000
 ```
+
 ### 📸 Preview
+
 ```bash
 (Imagine a stunning, high-resolution 4K code snippet here!)
-
 JavaScript
 // Example of the magic you can create
 import { Vibe } from 'codecrafter-advanced';
@@ -74,7 +77,19 @@ const myCode = new Vibe({
 
 myCode.export(); // Limitless 4K downloads unlocked.
 ```
+
+---
+
+## 🎥 Demo Preview
+
+<video src="CodeCraftr-Animation-4K.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
+
+---
+
 ### 🤝 Acknowledgements & Inspiration
+
 This project is an advanced, unrestricted clone built upon the brilliant foundational ideas of the original Codecraftr. We took the core concept—making code look beautiful—and injected it with AI, 4K rendering capabilities, and an unlimited mindset to push the boundaries of what a code-sharing tool can be.
 
 #### Crafted with ❤️ and 🤖 for the Developer Community.
