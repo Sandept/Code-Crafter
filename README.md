@@ -6,14 +6,6 @@ Write code in a beautiful terminal, catch the vibe, and download cinematic 4K sn
 [🚀 Launch Live Codepad](https://sandept.github.io/Code-Crafter/)
 
 ---
----
-<div align="center">
-  <video src="CodeCraftr-Animation-4K.mp4" width="100%" style="max-width: 800px; border-radius: 10px;" autoplay loop muted controls>
-    Your browser does not support the video tag.
-  </video>
-</div>
----
----
 
 ## ✧ The Vision
 
